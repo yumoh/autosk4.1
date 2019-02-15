@@ -74,7 +74,7 @@ class ARDRegression(AutoSklearnRegressionAlgorithm):
     @staticmethod
     def get_hyperparameter_search_space(dataset_properties=None):
         cs = ConfigurationSpace()
-        n_iter = UnParametrizedHyperparameter("n_iter", value=300)
+        n_iter = UnParametrizedHyperparameter("n_iter", value=200)
         tol = UniformFloatHyperparameter("tol", 10 ** -5, 10 ** -1,
                                          default_value=10 ** -3, log=True)
         alpha_1 = UniformFloatHyperparameter(name="alpha_1", lower=10 ** -10,

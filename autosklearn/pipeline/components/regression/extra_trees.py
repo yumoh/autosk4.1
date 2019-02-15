@@ -123,11 +123,11 @@ class ExtraTreesRegressor(
     def get_hyperparameter_search_space(dataset_properties=None):
         cs = ConfigurationSpace()
 
-        n_estimators = Constant("n_estimators", 100)
+        n_estimators = Constant("n_estimators", 50)
         criterion = CategoricalHyperparameter("criterion",
                                               ['mse', 'friedman_mse', 'mae'])
         max_features = UniformFloatHyperparameter(
-            "max_features", 0.1, 1.0, default_value=1)
+            "max_features", 0.1, 0.9, default_value=1)
 
         max_depth = UnParametrizedHyperparameter(name="max_depth", value="None")
         max_leaf_nodes = UnParametrizedHyperparameter("max_leaf_nodes", "None")

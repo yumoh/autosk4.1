@@ -61,7 +61,7 @@ class AdaboostRegressor(AutoSklearnRegressionAlgorithm):
 
         # base_estimator = Constant(name="base_estimator", value="None")
         n_estimators = UniformIntegerHyperparameter(
-            name="n_estimators", lower=50, upper=500, default_value=50,
+            name="n_estimators", lower=50, upper=300, default_value=50,
             log=False)
         learning_rate = UniformFloatHyperparameter(
             name="learning_rate", lower=0.01, upper=2, default_value=0.1,

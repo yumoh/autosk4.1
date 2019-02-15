@@ -105,11 +105,11 @@ class RandomForest(
     @staticmethod
     def get_hyperparameter_search_space(dataset_properties=None):
         cs = ConfigurationSpace()
-        n_estimators = Constant("n_estimators", 100)
+        n_estimators = Constant("n_estimators", 50)
         criterion = CategoricalHyperparameter("criterion",
                                               ['mse', 'friedman_mse', 'mae'])
         max_features = UniformFloatHyperparameter(
-            "max_features", 0.1, 1.0, default_value=1.0)
+            "max_features", 0.1, 0.9, default_value=1.0)
         max_depth = UnParametrizedHyperparameter("max_depth", "None")
         min_samples_split = UniformIntegerHyperparameter(
             "min_samples_split", 2, 20, default_value=2)

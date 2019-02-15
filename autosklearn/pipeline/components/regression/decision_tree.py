@@ -79,7 +79,7 @@ class DecisionTree(AutoSklearnRegressionAlgorithm):
 
         criterion = CategoricalHyperparameter('criterion',
                                               ['mse', 'friedman_mse', 'mae'])
-        max_features = Constant('max_features', 1.0)
+        max_features = Constant('max_features', 0.9)
         max_depth = UniformFloatHyperparameter(
             'max_depth', 0., 2., default_value=0.5)
         min_samples_split = UniformIntegerHyperparameter(
