@@ -139,7 +139,7 @@ class GradientBoosting(
         subsample = UniformFloatHyperparameter(
             name="subsample", lower=0.01, upper=1.0, default_value=1.0, log=False)
         max_features = UniformFloatHyperparameter(
-            "max_features", 0.1, 1.0, default_value=1)
+            "max_features", 0.1, 0.9, default_value=0.8)
         max_leaf_nodes = UnParametrizedHyperparameter(
             name="max_leaf_nodes", value="None")
         min_impurity_decrease = UnParametrizedHyperparameter(

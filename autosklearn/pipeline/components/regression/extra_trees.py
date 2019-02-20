@@ -127,7 +127,7 @@ class ExtraTreesRegressor(
         criterion = CategoricalHyperparameter("criterion",
                                               ['mse', 'friedman_mse', 'mae'])
         max_features = UniformFloatHyperparameter(
-            "max_features", 0.1, 0.9, default_value=1)
+            "max_features", 0.1, 0.9, default_value=0.8)
 
         max_depth = UnParametrizedHyperparameter(name="max_depth", value="None")
         max_leaf_nodes = UnParametrizedHyperparameter("max_leaf_nodes", "None")

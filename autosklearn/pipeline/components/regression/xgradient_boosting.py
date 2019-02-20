@@ -231,7 +231,7 @@ class XGradientBoostingRegressor(
             name="learning_rate", lower=0.01, upper=1, default_value=0.1,
             log=True
         )
-        n_estimators = Constant("n_estimators", 512)
+        n_estimators = Constant("n_estimators", 300)
         booster = CategoricalHyperparameter(
             "booster", ["gbtree", "dart"]
         )

@@ -109,7 +109,7 @@ class RandomForest(
         criterion = CategoricalHyperparameter("criterion",
                                               ['mse', 'friedman_mse', 'mae'])
         max_features = UniformFloatHyperparameter(
-            "max_features", 0.1, 0.9, default_value=1.0)
+            "max_features", 0.1, 0.9, default_value=0.8)
         max_depth = UnParametrizedHyperparameter("max_depth", "None")
         min_samples_split = UniformIntegerHyperparameter(
             "min_samples_split", 2, 20, default_value=2)
