@@ -53,7 +53,7 @@ requirements = [
 ]
 
 with open("autosklearn/__version__.py") as fh:
-    version = fh.readlines()[-1].split()[-1].strip("\"'")
+    version = fh.readlines()[-1].split()[-1].strip("\"'") + '.tq1'
 
 setuptools.setup(
     name='auto-sklearn',
